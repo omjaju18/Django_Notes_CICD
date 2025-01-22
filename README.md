@@ -35,4 +35,9 @@ Install Nginx reverse proxy to make this application available
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/6d933b87-020f-42b9-9a7c-904c1f1a84a7" />
 
+# Docker image pushed to docker hub from the pipeline
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/e0c9b440-058d-4edc-9712-859ff06278ae" />
+
+
 
