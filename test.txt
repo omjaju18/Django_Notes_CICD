@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('code') {
+            steps {
+                echo 'this is cloning code'
+                git url: "https://github.com/omjaju18/Django_Notes_CICD.git", branch: "master"
+                echo "success"
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'this is build code'
+                sh "docker build -t notes-app:latest ."
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'this is test code'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'this is deploy code'
+                sh "docker run -d -p 8000:8000 notes-app:latest"
+            }
+        }
+    }
+}
